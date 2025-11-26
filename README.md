@@ -43,3 +43,28 @@ Daily updates will appear in this repository.
 ## 📎 Notes
 - Do not commit any private or PII files.  
 - Large Power BI files (.pbix) can be hosted via OneDrive/Google Drive and linked here if file size is an issue.
+
+## 📅 Daily Progress
+
+### 🗓️ Day 1 — Project Initialization
+**Completed:**
+- Created full repository structure (`data/`, `data/raw/`, `sql/`, `reports/`, `powerbi/`, `scripts/`)
+- Added `.gitkeep` files to enable folder versioning
+- Uploaded essential Olist datasets for analysis:
+  - `olist_orders_dataset.csv`
+  - `olist_order_items_dataset.csv`
+  - `olist_order_payments_dataset.csv`
+  - `olist_customers_dataset.csv`
+  - `olist_products_dataset.csv`
+  - `olist_order_reviews_dataset.csv`
+- Skipped the large geolocation file (not needed for KPIs, RFM, cohort, or business analysis)
+- Added `.gitignore` to maintain a clean repository
+- Built the foundation of the README with project overview, structure, goals, and dataset info
+
+**Skills practiced:**
+- Repository organization
+- Version control fundamentals
+- Data documentation
+- Project setup best practices
+
+
