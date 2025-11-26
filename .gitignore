@@ -1,0 +1,20 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore temporary files
+*.tmp
+*.log
+*.zip
+
+# Ignore large data files accidentally added
+*.7z
+*.tar
+*.tar.gz
+
+# Power BI autosaving files
+*.tmp.pbix
+
+# Python temporary files (if scripts are added later)
+__pycache__/
+*.pyc
