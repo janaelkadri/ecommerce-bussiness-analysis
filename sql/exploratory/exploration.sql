@@ -77,3 +77,58 @@ FROM olist_order_items_dataset
 GROUP BY order_id
 ORDER BY order_revenue DESC
 LIMIT 10;
+
+/*************************************************************
+Exploratory Metrics / KPIs
+Author: Jana El Kadri
+Date: 2025-11-28
+Description: First 5 key performance indicators (KPIs) for 
+NovaMart / Olist dataset. Queries written in SQL style.
+**************************************************************/
+
+/* 1️⃣ Total Revenue
+   Sum of all order items' prices
+*/
+SELECT SUM(price) AS Total_Revenue
+FROM order_items;
+
+
+/* 2️⃣ Total Orders
+   Count of distinct orders in the dataset
+*/
+SELECT COUNT(DISTINCT order_id) AS Total_Orders
+FROM orders;
+
+
+/* 3️⃣ Average Order Value (AOV)
+   Average of total order value per order
+*/
+SELECT AVG(order_total) AS AOV
+FROM (
+    SELECT order_id, SUM(price) AS order_total
+    FROM order_items
+    GROUP BY order_id
+) AS t;
+
+
+/* 4️⃣ Number of Unique Customers
+   Count of distinct customers who made orders
+*/
+SELECT COUNT(DISTINCT customer_id) AS Unique_Customers
+FROM orders;
+
+
+/* 5️⃣ Revenue by Order Status
+   Sum of revenue grouped by order_status
+*/
+SELECT o.order_status, SUM(ot.order_total) AS revenue
+FROM orders o
+LEFT JOIN (
+    SELECT order_id, SUM(price) AS order_total
+    FROM order_items
+    GROUP BY order_id
+) ot
+ON o.order_id = ot.order_id
+GROUP BY o.order_status
+ORDER BY revenue DESC;
+
