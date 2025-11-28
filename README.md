@@ -148,4 +148,13 @@ GROUP BY order_id
 ORDER BY order_revenue DESC
 LIMIT 10;
 
+--I performed quick exploratory data analysis (EDA) and calculated the first core KPIs for the Olist dataset. These metrics provide early business insights into revenue, customer behavior, and order performance. The KPIs include:
 
+1. **Total Revenue** – Total sales value from all orders  
+2. **Total Orders** – Count of distinct orders in the dataset  
+3. **Average Order Value (AOV)** – Average revenue per order  
+4. **Number of Unique Customers** – Unique customers who placed orders  
+5. **Revenue by Order Status** – Revenue breakdown by order status (delivered, canceled, shipped, etc.)
+
+### **SQL Queries**
+The queries are saved in [`day2_kpis.sql`](./day2_kpis.sql) and can be run directly on the dataset. Each query includes comments explaining its purpose and logic.
