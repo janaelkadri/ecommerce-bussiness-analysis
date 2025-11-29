@@ -155,6 +155,16 @@ LIMIT 10;
 3. **Average Order Value (AOV)** – Average revenue per order  
 4. **Number of Unique Customers** – Unique customers who placed orders  
 5. **Revenue by Order Status** – Revenue breakdown by order status (delivered, canceled, shipped, etc.)
+6. **GMV (Revenue + Freight):** R$ 15,843,553.24
+7. **Items Sold:** 112,650 – Count of total product_items in the dataset  
+8. **Sellers:** 3,095 – Count of distinct sellers in the dataset  
+9. **Products:** 32,951 – Count of distinct products in the dataset  
+
+### 🔍 Interpretation
+- The marketplace is **large and healthy**, with strong order volume suitable for deeper analysis.
+- AOV of **R$ 137.75** suggests customers typically purchase lower-ticket items.
+- Over **32k products** and **3k sellers** indicate a highly fragmented long-tail marketplace.
+- GMV of **R$ 15.8M** reflects solid gross merchandise flow across the platform.
 
 ### **SQL Queries**
 The queries are saved in [`day2_kpis.sql`](./day2_kpis.sql) and can be run directly on the dataset. Each query includes comments explaining its purpose and logic.
